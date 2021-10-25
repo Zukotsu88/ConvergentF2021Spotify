@@ -6,12 +6,12 @@ export default function SpotifyButtonTrio(props) {
         <div id="spot_buttons">
 
         <Link to={props.leftLink}>
-        <button className="spot_button">First</button>
+        <button className="spot_button">Left</button>
         </Link>
-        <button className="spot_button">Second</button>
+        <button className="spot_button">Useless Middle</button>
 
         <Link to={props.rightLink}>
-        <button className="spot_button">Third</button>
+        <button className="spot_button" onClick={props.rightClickHandler}>Right</button>
         </Link>
 
         </div>

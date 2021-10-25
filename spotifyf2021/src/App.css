@@ -284,3 +284,12 @@ body {
 .radio_buttons {
     z-index: 1;
 }
+
+.radio_button {
+    vertical-align: middle;
+    margin: 0px;
+}
+
+#slider {
+    margin-top: 20px;
+}

@@ -4,6 +4,7 @@ class Radio_Buttons extends Component {
 
     constructor(props) {
         super();
+
         this.state = {
             name: 'Male'
         };
@@ -13,36 +14,42 @@ class Radio_Buttons extends Component {
 
     onValChange = (event) => {
         this.setState({
-          name: event.target.value
+            name: event.target.value
         });
-      }
+    }
 
     render() {
         return (
-            <div className="App">
+            <div className="radio_buttons">
                 <form>
-                    <label>
+                    <label className="radio_button">
                         <input
                             type="radio"
                             value="Male"
-                            checked={this.state.name === "Male"} />
+                            checked={this.state.name === "Male"}
+                            onChange={this.onValChange} />
                         <span>Male</span>
                     </label>
 
-                    <label>
+                    <label className="radio_button">
                         <input
                             type="radio"
                             value="Female"
-                            checked={this.state.name === "Female"} />
+                            checked={this.state.name === "Female"}
+                            onChange={this.onValChange} />
                         <span>Female</span>
                     </label>
 
-                    <label>
+                    <label className="radio_button">
                         <input
                             type="radio"
                             value="Other"
-                            checked={this.state.name === "Other"} />
-                        <span>Other</span>
+                            checked={this.state.name === "Other"}
+                            onChange={this.onValChange} />
+                        <span>
+                        <input type="text" className="long_input" placeholder="Other: "
+                            onChange={e => this.props.setOther(e.target.value)}></input>
+                        </span>
                     </label>
                 </form>
             </div>
