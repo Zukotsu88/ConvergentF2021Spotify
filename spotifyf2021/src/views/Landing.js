@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import bg from '../backgrounds/landing_bg.png';
+import { Button } from '@mui/material';
 
 export default function Landing() {
   return (
@@ -12,10 +13,10 @@ export default function Landing() {
         <h1 className="landing-title">Wavelength</h1>
         <div className="subtitle" id="find-friends">find friends with the same frequency</div>
 
-        <Link to="/login">
-          <button id="landing-button">
+        <Link to="/login" style={{ textDecoration: 'none' }}>
+          <Button id="landing-button" variant="outlined">
             <div id="landing-button-text">Start Now</div>
-          </button>
+          </Button>
         </Link>
 
       </div>

@@ -9,7 +9,7 @@ export default function Login() {
             <div className="login-content">
                 <div className="subtitle please_login">to continue, log in with Spotify</div>
 
-                <Link to="/begin_questionaire">
+                <Link to="/begin_questionaire" style={{ textDecoration: 'none' }}>
                 <button className="filled-button" id="login_button">
                     <div className="filled-button-txt">Log in with Spotify</div>
                 </button>

@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
 class Radio_Buttons extends Component {
 
@@ -6,53 +11,41 @@ class Radio_Buttons extends Component {
         super();
 
         this.state = {
-            name: 'Male'
+            gender: 'male'
         };
 
         this.onValChange = this.onValChange.bind(this);
+        // this.props.setter(this.state.gender);
+        
+        // this.sendChange = () => {
+
+        // };
     }
 
-    onValChange = (event) => {
+    onValChange = (e) => {
         this.setState({
-            name: event.target.value
+            gender: e.target.value
         });
+
+        this.props.setter(this.state.gender);
+        console.log(this.state.gender);
     }
 
     render() {
         return (
-            <div className="radio_buttons">
-                <form>
-                    <label className="radio_button">
-                        <input
-                            type="radio"
-                            value="Male"
-                            checked={this.state.name === "Male"}
-                            onChange={this.onValChange} />
-                        <span>Male</span>
-                    </label>
-
-                    <label className="radio_button">
-                        <input
-                            type="radio"
-                            value="Female"
-                            checked={this.state.name === "Female"}
-                            onChange={this.onValChange} />
-                        <span>Female</span>
-                    </label>
-
-                    <label className="radio_button">
-                        <input
-                            type="radio"
-                            value="Other"
-                            checked={this.state.name === "Other"}
-                            onChange={this.onValChange} />
-                        <span>
-                        <input type="text" className="long_input" placeholder="Other: "
-                            onChange={e => this.props.setOther(e.target.value)}></input>
-                        </span>
-                    </label>
-                </form>
-            </div>
+            <FormControl component="fieldset">
+                <FormLabel component="legend" className="questionaire_title">Gender</FormLabel>
+                <RadioGroup
+                    aria-label="gender"
+                    defaultValue="male"
+                    name="radio-buttons-group"
+                    onChange={this.onValChange}
+                >
+                    <FormControlLabel value="male" control={<Radio />} label="Male" checked={this.state.gender == "male"}/>
+                    <FormControlLabel value="female" control={<Radio />} label="Female" checked={this.state.gender == "female"}/>
+                    <FormControlLabel value="other" control={<Radio />} label="Other" checked={this.state.gender == "other"}/>
+                </RadioGroup>
+            </FormControl>
         );
     }
 }
