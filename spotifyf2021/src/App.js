@@ -8,7 +8,6 @@ import Begin_Questionaire from './views/Begin_Questionaire';
 import Question1 from './views/Question1';
 import Question2 from './views/Question2';
 import Question3 from './views/Question3';
-import Question4 from './views/Question4';
 
 function App() {
   return (
@@ -36,10 +35,6 @@ function App() {
 
         <Route exact path="/question3">
           <Question3 />
-        </Route>
-
-        <Route exact path="/question4">
-          <Question4 />
         </Route>
 
       </Router>
