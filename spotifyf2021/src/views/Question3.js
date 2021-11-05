@@ -11,7 +11,7 @@ export default function Question3() {
     const submitValue = () => {
         const frmdetails = {
             'Pronouns': pronouns,
-            'Gender': gender
+            'Gender': gender == null ? 'other' : gender
         }
 
         console.log(frmdetails);
