@@ -24,12 +24,6 @@ body {
     justify-content: center;
 }
 
-.landing-header, .find-friends {
-   /* left: 31%;
-    position: absolute;*/ /* KEEP THIS ABSOLUTE */
-}
-
-
 .subtitle {
     font-family: "Roboto", "sans-serif";
     text-align: center;
@@ -108,11 +102,6 @@ body {
     border-radius: 50px;
     padding: 17px 39px 17px 38px;
     filter: drop-shadow(0px 5px 15px rgba(111, 115, 210, 0.25));
-
-    /* display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center; */
 }
 
 #landing-button-text {
@@ -143,10 +132,8 @@ body {
     padding: 17px 38px 17px 38px;
     width: 736px;
     height: 75px;
-   /* left: 27%;
-    top: 50%; */
 
-/* purple subtle shadow */
+    /* purple subtle shadow */
 
     filter: drop-shadow(0px 5px 15px rgba(111, 115, 210, 0.25));
     display: flex;
@@ -176,7 +163,6 @@ body {
     /*text-align: center; */
     text-transform: uppercase;
     font-feature-settings: 'cpsp' on;
-
     color: #6F73D2;
 }
 
@@ -196,23 +182,6 @@ body {
     justify-content: center;
 }
 
-#almost_done {
-    /* top: 50%; */
-}
-
-#beginQText {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    /* height: 100%; */
-}
-
-.questTxt {
-        /* max-width: 100%;
-        max-height: 100%;
-        flex: auto; */
-}
 
 #start-button {
     /* top: 70%; */
@@ -252,7 +221,7 @@ body {
     mix-blend-mode: normal;
     align-self: flex-start;
     margin-left: 42px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .long_input, .short_input {
@@ -267,6 +236,16 @@ body {
 .long_input {
     align-self: flex-start;
     width: 40%;
+}
+
+.long_radio_input {
+    background: #FFFFFF;
+    border-radius: 50px;  
+    height: 15px;
+    padding: 10px 18px 10px 16px;
+    width: 230px;
+    margin-left: 0;
+    align-self: flex-start;
 }
 
 .input_pair {
@@ -305,4 +284,18 @@ body {
 
 #slider {
     margin-bottom: 25px;
+}
+
+#radio_wrapper {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 32px;
+}
+
+#long_radio_input_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }

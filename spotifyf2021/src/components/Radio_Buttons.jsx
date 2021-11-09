@@ -5,6 +5,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { TextField } from '@mui/material';
+import { Input } from '@material-ui/core';
 
 class Radio_Buttons extends Component {
 
@@ -52,7 +53,7 @@ class Radio_Buttons extends Component {
     render() {
         return (
             <FormControl component="fieldset">
-                <FormLabel component="legend" className="questionaire_title">Gender</FormLabel>
+                {/* <FormLabel component="legend" className="questionaire_title"></FormLabel> */}
                 <RadioGroup
                     aria-label="gender"
                     // defaultValue="male"
@@ -65,12 +66,13 @@ class Radio_Buttons extends Component {
                     <FormControlLabel
                         value="other"
                         control={<Radio />}
-                        label={
-                            <TextField
-                                placeholder="other"
+                        label={<div id="long_radio_input_wrapper">
+                            <input className="long_radio_input"
+                                placeholder="Other"
                                 onChange={this.handleOtherChange}
                                 onFocus={this.focusOther}
                             />
+                            </div>
                         }
 
                         checked={this.state.gender != "male" && this.state.gender != "female" && this.state.gender != ""}

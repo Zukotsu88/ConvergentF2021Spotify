@@ -7,10 +7,10 @@ export default function Begin_Questionaire() {
     <div className="app-body">
       <img src={bg} className="background"/>
 
-      <div className="app-content" id="beginQText">
+      <div className="app-content">
 
-        <div className="subtitle questTxt" id="almost_done">almost done! :)\n</div>
-        <div className="subtitle questTxt">let's set up your profile with a few quick questions.</div>
+        <div className="subtitle">almost done! :)</div>
+        <div className="subtitle" style={{width: "900px"}}>let's set up your profile with a few quick questions.</div>
 
         <Link to="/question1" style={{ textDecoration: 'none' }}>
         <button className="filled-button" id="start-button">

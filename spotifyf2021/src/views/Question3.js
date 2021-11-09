@@ -22,9 +22,10 @@ export default function Question3() {
             <img src={bg} className="background" />
 
             <div className="app-content questions">
-
-                <Radio_Buttons setter={setGender} gender={gender}/>
-
+            <h3 className="questionaire_title">Gender</h3>
+                <div id="radio_wrapper">
+                    <Radio_Buttons id="radio_buttons" setter={setGender} gender={gender} />
+                </div>
                 <input type="text" className="long_input" placeholder="Pronouns: "
                     onChange={e => setPronouns(e.target.value)}></input>
                 <SpotifyButtonTrio leftLink="/question2" rightLink="/question3" rightClickHandler={submitValue} />
