@@ -1,6 +1,6 @@
 import bg from '../backgrounds/common.png';
 import SpotifyButtonTrio from "../components/Spotify_Button_Trio";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Question1() {
 
@@ -10,8 +10,9 @@ export default function Question1() {
     const [twitter, setTwitter] = useState('');
     const [tiktok, setTiktok] = useState('');
     const [snapchat, setSnapchat] = useState('');
+    const [postId, setPostId] = useState('');
 
-    const submitValue = () => {
+    const SubmitValue = () => {
          const frmdetails = {
             'Name': name,
             'Email': email,
@@ -21,7 +22,24 @@ export default function Question1() {
             'Snapchat': snapchat
         }
 
-        console.log(frmdetails);
+        // console.log(frmdetails);
+
+        // useEffect(() => {
+            // POST request using fetch inside useEffect React hook
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({frmdetails})
+            };
+
+            fetch('https://spotify-api-test.estaudere.repl.co/user-track-info', requestOptions)
+                .then(response => response.json()).then(data => console.log(data)).catch(error => console.log(error));
+            
+            // empty dependency array means this effect will only run once (like componentDidMount in classes)
+        // }, []);
+        
+
+        console.log(postId);
     }
 
     return (
@@ -52,7 +70,7 @@ export default function Question1() {
 
                 {/* <Input_Pair firstPlaceHolder="Tiktok" secondPlaceHolder="Snapchat" /> */}
 
-                <SpotifyButtonTrio leftLink="/begin_questionaire" rightLink="/question2" rightClickHandler={submitValue} />
+                <SpotifyButtonTrio leftLink="/begin_questionaire" rightLink="/question2" rightClickHandler={SubmitValue} />
             </div>
         </div>
     )

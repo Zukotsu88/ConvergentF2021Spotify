@@ -8,13 +8,16 @@ import Begin_Questionaire from './views/Begin_Questionaire';
 import Question1 from './views/Question1';
 import Question2 from './views/Question2';
 import Question3 from './views/Question3';
+import Self_Profile from './views/Self_Profile';
+import Matching from './views/Matching';
+import Other_Profile from './views/M_Components/Other_Profile';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Route exact path="/">
-          <Landing />
+          <Landing /> 
         </Route>
 
         <Route exact path="/login">
@@ -35,6 +38,18 @@ function App() {
 
         <Route exact path="/question3">
           <Question3 />
+        </Route>
+
+        <Route exact path="/self_profile">
+          <Self_Profile />
+        </Route>
+
+        <Route exact path="/matching">
+          <Matching />
+        </Route>
+
+        <Route path="/other_profile/:other_id">
+          <Other_Profile />
         </Route>
 
       </Router>
