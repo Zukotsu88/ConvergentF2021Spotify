@@ -11,6 +11,7 @@ import Question3 from './views/Question3';
 import Self_Profile from './views/Self_Profile';
 import Matching from './views/Matching';
 import Other_Profile from './views/M_Components/Other_Profile';
+import Compatibility from './views/Compatibility';
 
 function App() {
   return (
@@ -50,6 +51,10 @@ function App() {
 
         <Route path="/other_profile/:other_id">
           <Other_Profile />
+        </Route>
+
+        <Route path="/compatibility/:other_id/:percent/:common_artist">
+          <Compatibility />
         </Route>
 
       </Router>

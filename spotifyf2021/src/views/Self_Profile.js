@@ -1,6 +1,7 @@
 import React from 'react';
 import Profile_Pic_Name from './SP_Components/Profile_Pic_Name';
 import Top_Artists from './SP_Components/Top_Artists';
+import Top_Tracks from './SP_Components/Top_Tracks';
 import Sidebar from './Sidebar';
 import { useState, useEffect } from 'react';
 
@@ -36,12 +37,11 @@ export default function Self_Profile() {
             <div className="sp_app_v">
                 <Profile_Pic_Name img={userData.image} name={userData.display_name} id={userData.id}/>
                 <div className="sp_v_body">
-                    {/* <Top_Artists top_artists={userData.top_artists}/> */}
-                    {/* <Top_Tracks />
-                    <Recent_Mood />
+                    <Top_Artists/>
+                    <Top_Tracks />
+                    {/* <Recent_Mood />
                     <Top_Genres />
                     <Obscurity /> */}
-            
                 </div>
             </div>
 

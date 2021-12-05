@@ -47,9 +47,15 @@ export default function Match_Card({ user_match }) {
                         <CheckCircleIcon />
                     </IconButton>
 
-                    <Link to={"/other_profile/" + user_match.users[1]}>
-                    <Button variant="contained">view user's profile</Button>
+                    <Link to={"/other_profile/" + user_match.users[1]} style={{ textDecoration: 'none' }}>
+                        <Button variant="contained">view user's profile</Button>
                     </Link>
+
+                    <Link to={"/compatibility/" + user_match.users[1] + "/" + user_match.percent_match + "/" + user_match.common_artist}
+                     style={{ textDecoration: 'none' }} className="view_comp_button">
+                        <Button variant="contained" >view compatibility</Button>
+                    </Link>
+
                     </div>
                 </div>
 

@@ -13,7 +13,7 @@ export default function Landing() {
         <h1 className="landing-title">Wavelength</h1>
         <div className="subtitle" id="find-friends">find friends with the same frequency</div>
 
-        <Link to="/self_profile" style={{ textDecoration: 'none' }}>
+        <Link to="/login" style={{ textDecoration: 'none' }}>
           <Button id="landing-button" variant="outlined">
             <div id="landing-button-text">Start Now</div>
           </Button>

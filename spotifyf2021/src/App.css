@@ -303,17 +303,26 @@ body {
 /*this is for the self-profile page*/
 
 .sp_app {
-    z-index: 1;
     display: flex;
-    height: 100%;
     flex-direction: row;
+    height: 100%;
     align-items: center;
+    /* background-color: #add8e6; */
     justify-content: flex-start;
+
+/*     
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: 0; */
+
 }
 
 .sp_v_body {
     display: flex;
     height: 100%;
+    width: 1920px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -554,6 +563,226 @@ body {
     justify-content: space-evenly;
 }
 
+.artist_title {
+    margin-left: 100px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 30px;
+    line-height: 35px;
+    color: #5D2E8C;
 
+}
 
+.a_v {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 64px;
 
+}
+
+.artists {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.artist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.artist_image {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: visible;
+    border-radius: 5%;
+}
+
+.artist_name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    color: #6F73D2;
+
+}
+
+.a_h {
+    margin-top: 2444px;
+    background-color: #ebf8ff;
+
+}
+
+.track_sec_title {
+    margin-left: 100px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 30px;
+    line-height: 35px;
+    color: #5D2E8C;
+
+}
+
+.t_h {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow-y: visible;
+}
+
+.all_tracks {
+    margin-top: 0px;
+    background-color: #ebf8ff;
+    /* overflow-y: scroll; */
+}
+
+.tc_h {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    filter: drop-shadow(0px 5px 15px rgba(111, 115, 210, 0.25));
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
+    backdrop-filter: blur(4px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 20px;
+
+    margin: 20px;
+}
+
+.track_name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 25px;
+    line-height: 29px;
+    padding: 20px;
+    color: #6F73D2;
+}
+
+.t_img {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: visible;
+    border-radius: 5%;
+}
+
+.view_comp_button {
+    margin-left: 20px;
+}
+
+.c_sb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0.75);
+    mix-blend-mode: soft-light;
+}
+
+.c_page {
+    z-index: 0;
+    width: 100vw;
+    height:100vh;
+    background: linear-gradient(180deg, #FCC9CB 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.c_sbt {
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #5D2E8C;
+    mix-blend-mode: multiply;
+}
+
+.c_img {
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    overflow: auto;
+    border-radius: 50%;
+    margin-right: 44px;
+    margin-top: 65px;
+    margin-left: 100px;
+    margin-bottom: 55.65px;
+}
+
+.c_h {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.c_percent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: flex-end;
+    margin-right: 50px;
+}
+
+.percent_big {
+    /* font-family: "Roboto", "sans-serif"; */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 234px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(100.37deg, #6F73D2 -1.85%, #FF6666 98.24%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.word_compat {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(100.37deg, #6F73D2 -1.85%, #FF6666 98.24%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.r_img {
+    margin-right: 450px;
+}
+
+.comp_artist {
+    background: linear-gradient(92.63deg, #FFFDC8 0%, #C9FFD5 100%);
+    mix-blend-mode: normal;
+    border-radius: 50px;
+    width: fit-content;
+    height: fit-content;
+    filter: drop-shadow(0px 4px 20px rgba(165, 166, 246, 0.15));
+    margin-left: 150px;
+    padding: 20px;
+}
